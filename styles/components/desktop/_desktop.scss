@@ -1,59 +1,57 @@
 @use "../../helpers/variables" as *;
 
 .wrapper {
-  display: grid;
-  &inner {
-    display: flex;
-    flex-flow: column;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 2vh;
-  }
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+  place-items: center;
+  // top right bottom left
+  padding: 2rem 2rem 0;
+  // This is to make the wrapper big enough to center it in the middle of the screen
+  min-height: 90vh;
 }
 
 // Desktop styling
-
 .desktop {
-  display: block;
   background-color: $teal;
   font-family: "W95FA", monospace;
-  //max-height: 95vh;
+  aspect-ratio: 4/3;
+  // Tinker with width and height to get the right size
+  max-width: 75vw;
 
   &main {
-    display: grid;
+    display: flex;
     background-color: $teal;
     justify-content: start;
+    aspect-ratio: 4/3;
 
     section {
       display: flex;
-      flex-direction: column;
+      flex-flow: column wrap;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 1rem;
-      max-height: 75vh;
-      margin: auto;
     }
   }
 
-  &sub {
-    display: grid;
-    background-color: $teal;
-    font-family: "W95FA", monospace;
-    justify-content: center;
+  // &sub {
+  //   display: grid;
+  //   background-color: $teal;
+  //   font-family: "W95FA", monospace;
+  //   justify-content: center;
 
-    section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      max-height: 75vh;
-      margin: auto;
-      width: auto;
-      aspect-ratio: 4/3;
-    }
-  }
+  //   section {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //     justify-content: center;
+  //     padding: 1rem;
+  //     max-height: 75vh;
+  //     margin: auto;
+  //     width: auto;
+  //     aspect-ratio: 4/3;
+  //   }
+  // }
 }
 
 .icon {
@@ -96,7 +94,6 @@
     justify-content: center;
     align-items: center;
     border-style: inset;
-
     background: $taskbarmid;
     padding: 0.1rem;
   }
@@ -108,7 +105,6 @@
     align-items: center;
     border-style: outset;
     max-height: 1.45rem;
-
     background: $taskbardark;
     padding: 0.1rem;
   }
@@ -119,10 +115,8 @@
 .windowheader {
   display: flex;
   flex-direction: row;
-  justify-items: stretch;
+  place-items: center stretch;
   justify-content: space-between;
-  align-items: center;
-
   background: $windowheader;
   width: 100%;
   height: 1.5rem;
@@ -148,12 +142,12 @@
   border: 5px;
   padding: 5px;
   max-height: fit-content;
-
   justify-self: center;
-
-  box-shadow: inset -1px -1px black, inset -2px -2px $taskbarmid,
-    inset 1px 1px $taskbarlight, inset 2px 2px $taskbarmid;
-
+  box-shadow:
+    inset -1px -1px black,
+    inset -2px -2px $taskbarmid,
+    inset 1px 1px $taskbarlight,
+    inset 2px 2px $taskbarmid;
   background-color: $taskbardark;
 
   .content {
@@ -200,11 +194,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-
   background: $taskbardark;
   width: 100%;
   height: 1.5rem;
-
   padding-top: 2px;
 
   &inset {
@@ -213,7 +205,6 @@
     justify-content: center;
     align-items: flex-end;
     border-style: inset;
-
     background: $taskbarmid;
     width: 100%;
     height: 1rem;
@@ -242,8 +233,11 @@
   color: black;
   // text-shadow: 1px 1px 1px white;
 
-  box-shadow: inset -1px -1px black, inset -2px -2px $taskbarmid,
-    inset 1px 1px $taskbarlight, inset 2px 2px $taskbarmid;
+  box-shadow:
+    inset -1px -1px black,
+    inset -2px -2px $taskbarmid,
+    inset 1px 1px $taskbarlight,
+    inset 2px 2px $taskbarmid;
 
   // States
 
@@ -252,7 +246,10 @@
   }
 
   &:active {
-    box-shadow: inset 1px 1px black, inset 2px 2px $taskbarmid,
-      inset -1px -1px $taskbarlight, inset -2px -2px $taskbarmid;
+    box-shadow:
+      inset 1px 1px black,
+      inset 2px 2px $taskbarmid,
+      inset -1px -1px $taskbarlight,
+      inset -2px -2px $taskbarmid;
   }
 }

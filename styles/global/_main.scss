@@ -1,4 +1,5 @@
 @use "../helpers/variables" as *;
+@use "./reset";
 
 body {
   background-image: $body-bg-image;
