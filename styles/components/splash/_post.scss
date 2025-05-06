@@ -1,4 +1,4 @@
-@use "../../helpers/variables" as *;
+@use '../../helpers/variables' as *;
 
 $white: #fdffff;
 $red: red;
@@ -11,7 +11,7 @@ $red: red;
 .postlogo {
   display: flex;
   flex-direction: column;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   align-items: flex-start;
   white-space: wrap;
   width: 95vw;
@@ -24,10 +24,18 @@ $red: red;
   }
 }
 
+.postbuttons {
+  font-size: 1.65rem;
+
+  a {
+    font-size: 1rem;
+  }
+}
+
 .post {
   display: flex;
   padding: 0 3rem;
-  
+
   p {
     color: $white;
     font-family: monospace;
@@ -36,12 +44,11 @@ $red: red;
     a {
       text-decoration: none;
     }
-   
   }
 
   a {
     text-decoration: none;
-  
+
     &:visited {
       color: hsl(0deg 100% 30%);
     }
@@ -67,7 +74,6 @@ $red: red;
 
   .horizontal {
     display: flex;
-    
   }
 
   .blink {
@@ -76,14 +82,6 @@ $red: red;
 
   .blinkwhite {
     animation: blinkerwhite 3s step-start infinite;
-  }
-}
-
-.postbuttons {
-  font-size: 1.65rem;
-
-  a {
-    font-size: 1rem;
   }
 }
 
@@ -97,22 +95,20 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 5px;
- 
+
   p {
-  color: #000080;
-  text-align: center;
-  font-weight: bold;
-  font-family:monospace;
-  font-size: 1rem;
-  width: 95px;
-  height: 1.3rem;
-  background-color: $taskbardark;
+    color: #000080;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1rem;
+    width: 95px;
+    height: 1.3rem;
+    background-color: $taskbardark;
   }
-  
 }
 
 // Keyframes
-
 @keyframes blinker {
   25% {
     opacity: 0;
@@ -151,14 +147,14 @@ footer {
   }
 }
 
-#post{
+#post {
   background-color: black;
-  font-family: "W95FA";
+  font-family: 'W95FA', monospace;
 }
 
-#error{
+#error {
   background: #000080;
-  font-family: "W95FA";
+  font-family: 'W95FA', monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,5 +164,4 @@ footer {
   margin: auto;
   width: auto;
   aspect-ratio: 4/3;
-
 }

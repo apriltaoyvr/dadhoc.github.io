@@ -1,12 +1,20 @@
 {
-  "dependencies": {
-    "doiuse": "^4.4.1",
-    "scss": "^0.2.4",
-    "stylelint": "^14.14.1"
+  "name": "dadhoc.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dadhoc's personal website",
+  "scripts": {
+    "stylelint": "stylelint \"**/*.scss\" postcss-scss",
+    "stylelint:fix": "stylelint \"**/*.scss\" postcss-scss --fix"
   },
   "devDependencies": {
-    "stylelint-config-recommended": "^9.0.0",
-    "stylelint-config-standard": "^29.0.0",
-    "stylelint-scss": "^4.3.0"
+    "doiuse": "^6.0.5",
+    "postcss-scss": "^4.0.9",
+    "scss": "^0.2.4",
+    "stylelint": "^16.19.1",
+    "stylelint-config-recommended": "^16.0.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-scss": "^6.12.0"
   }
 }
